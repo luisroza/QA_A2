@@ -77,5 +77,91 @@ namespace A2.Test
             //Assert.AreEqual(ISOSCELES_TRIANGLE, actual);
             Assert.That(actual, Is.EqualTo(ISOSCELES_TRIANGLE));
         }
+
+        //Five(5) tests for a valid scalene triangle
+        [Test]
+        public void ValidScaleneTriangle_FirstSideHighestThirdSideLowest_ReturnsValidTriangle()
+        {
+            // Arrange
+            const int angle1 = 60;
+            const int angle2 = 45;
+            const int angle3 = 30;
+
+            // Act
+            var triangleAnalyzer = new Triangle();
+            var actual = triangleAnalyzer.AnalyzeTriangle(angle1, angle2, angle3);
+
+            // Assert
+            //Assert.AreEqual(SCALENE_TRIANGLE, actual);
+            Assert.That(actual, Is.EqualTo(SCALENE_TRIANGLE));
+        }
+
+        [Test]
+        public void ValidScaleneTriangle_SecondSideHighestThirdSideLowest_ReturnsValidTriangle()
+        {
+            // Arrange
+            const int angle1 = 45;
+            const int angle2 = 60;
+            const int angle3 = 30;
+
+            // Act
+            var triangleAnalyzer = new Triangle();
+            var actual = triangleAnalyzer.AnalyzeTriangle(angle1, angle2, angle3);
+
+            // Assert
+            //Assert.AreEqual(SCALENE_TRIANGLE, actual);
+            Assert.That(actual, Is.EqualTo(SCALENE_TRIANGLE));
+        }
+
+        [Test]
+        public void ValidScaleneTriangle_ThirdSideHighestFirsSideLowest_ReturnsValidTriangle()
+        {
+            // Arrange
+            const int angle1 = 30;
+            const int angle2 = 45;
+            const int angle3 = 60;
+
+            // Act
+            var triangleAnalyzer = new Triangle();
+            var actual = triangleAnalyzer.AnalyzeTriangle(angle1, angle2, angle3);
+
+            // Assert
+            //Assert.AreEqual(SCALENE_TRIANGLE, actual);
+            Assert.That(actual, Is.EqualTo(SCALENE_TRIANGLE));
+        }
+
+        [Test]
+        public void ValidScaleneTriangle_FirstSideHighestSecondSideLowest_ReturnsValidTriangle()
+        {
+            // Arrange
+            const int angle1 = 60;
+            const int angle2 = 30;
+            const int angle3 = 45;
+
+            // Act
+            var triangleAnalyzer = new Triangle();
+            var actual = triangleAnalyzer.AnalyzeTriangle(angle1, angle2, angle3);
+
+            // Assert
+            //Assert.AreEqual(SCALENE_TRIANGLE, actual);
+            Assert.That(actual, Is.EqualTo(SCALENE_TRIANGLE));
+        }
+
+        [Test]
+        public void ValidScaleneTriangle_ThirdSideHighestSecondSideLowest_ReturnsValidTriangle()
+        {
+            // Arrange
+            const int angle1 = 45;
+            const int angle2 = 30;
+            const int angle3 = 60;
+
+            // Act
+            var triangleAnalyzer = new Triangle();
+            var actual = triangleAnalyzer.AnalyzeTriangle(angle1, angle2, angle3);
+
+            // Assert
+            //Assert.AreEqual(SCALENE_TRIANGLE, actual);
+            Assert.That(actual, Is.EqualTo(SCALENE_TRIANGLE));
+        }
     }
 }
