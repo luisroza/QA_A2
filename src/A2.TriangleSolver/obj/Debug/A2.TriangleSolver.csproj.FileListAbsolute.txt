@@ -1,0 +1,6 @@
+C:\Users\rozam\Documents\Conestoga\Winter2023\QA\Assign2\code\src\A2.TriangleSolver\obj\Debug\A2.TriangleSolver.csproj.AssemblyReference.cache
+C:\Users\rozam\Documents\Conestoga\Winter2023\QA\Assign2\code\src\A2.TriangleSolver\obj\Debug\A2.TriangleSolver.csproj.CoreCompileInputs.cache
+C:\Users\rozam\Documents\Conestoga\Winter2023\QA\Assign2\code\src\A2.TriangleSolver\bin\Debug\A2.TriangleSolver.dll
+C:\Users\rozam\Documents\Conestoga\Winter2023\QA\Assign2\code\src\A2.TriangleSolver\bin\Debug\A2.TriangleSolver.pdb
+C:\Users\rozam\Documents\Conestoga\Winter2023\QA\Assign2\code\src\A2.TriangleSolver\obj\Debug\A2.TriangleSolver.dll
+C:\Users\rozam\Documents\Conestoga\Winter2023\QA\Assign2\code\src\A2.TriangleSolver\obj\Debug\A2.TriangleSolver.pdb
