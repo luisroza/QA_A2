@@ -163,5 +163,111 @@ namespace A2.Test
             //Assert.AreEqual(SCALENE_TRIANGLE, actual);
             Assert.That(actual, Is.EqualTo(SCALENE_TRIANGLE));
         }
+
+        //Three(3) tests for verifying a zero length for one or more sides
+        [Test]
+        public void InvalidAngleInput_FirstSideZero_ReturnsInvalidInputMessage()
+        {
+            // Arrange
+            const int angle1 = 0;
+            const int angle2 = 15;
+            const int angle3 = 30;
+
+            // Act
+            var triangleAnalyzer = new Triangle();
+            var actual = triangleAnalyzer.AnalyzeTriangle(angle1, angle2, angle3);
+
+            // Assert
+            //Assert.AreEqual(INVALID_INPUT, actual);
+            Assert.That(actual, Is.EqualTo(INVALID_INPUT));
+        }
+
+        [Test]
+        public void InvalidAngleInput_SecondSideZero_ReturnsInvalidInputMessage()
+        {
+            // Arrange
+            const int angle1 = 15;
+            const int angle2 = 0;
+            const int angle3 = 30;
+
+            // Act
+            var triangleAnalyzer = new Triangle();
+            var actual = triangleAnalyzer.AnalyzeTriangle(angle1, angle2, angle3);
+
+            // Assert
+            //Assert.AreEqual(INVALID_INPUT, actual);
+            Assert.That(actual, Is.EqualTo(INVALID_INPUT));
+        }
+
+        [Test]
+        public void InvalidAngleInput_ThirdSideZero_ReturnsInvalidInputMessage()
+        {
+            // Arrange
+            const int angle1 = 30;
+            const int angle2 = 15;
+            const int angle3 = 0;
+
+            // Act
+            var triangleAnalyzer = new Triangle();
+            var actual = triangleAnalyzer.AnalyzeTriangle(angle1, angle2, angle3);
+
+            // Assert
+            //Assert.AreEqual(INVALID_INPUT, actual);
+            Assert.That(actual, Is.EqualTo(INVALID_INPUT));
+        }
+
+        //if ((firstSide + secondSide) > thirdSide && (firstSide + thirdSide) > secondSide && (secondSide + thirdSide) > firstSide)
+
+        //Three(3) tests for verifying an invalid response(other than a zero length)
+        [Test]
+        public void InvalidTriangle_SumFirstAndSecondSidesNotGreaterThanThirdSide_ReturnsInvalidTriangle()
+        {
+            // Arrange
+            const int angle1 = 10;
+            const int angle2 = 15;
+            const int angle3 = 50;
+
+            // Act
+            var triangleAnalyzer = new Triangle();
+            var actual = triangleAnalyzer.AnalyzeTriangle(angle1, angle2, angle3);
+
+            // Assert
+            //Assert.AreEqual(INVALID_TRIANGLE, actual);
+            Assert.That(actual, Is.EqualTo(INVALID_TRIANGLE));
+        }
+
+        [Test]
+        public void InvalidTriangle_SumFirstAndThirdSidesNotGreaterThanSecondSide_ReturnsInvalidTriangle()
+        {
+            // Arrange
+            const int angle1 = 10;
+            const int angle2 = 50;
+            const int angle3 = 15;
+
+            // Act
+            var triangleAnalyzer = new Triangle();
+            var actual = triangleAnalyzer.AnalyzeTriangle(angle1, angle2, angle3);
+
+            // Assert
+            //Assert.AreEqual(INVALID_TRIANGLE, actual);
+            Assert.That(actual, Is.EqualTo(INVALID_TRIANGLE));
+        }
+
+        [Test]
+        public void InvalidTriangle_SumSecondAndThirdSidesNotGreaterThanFirstSide_ReturnsInvalidTriangle()
+        {
+            // Arrange
+            const int angle1 = 50;
+            const int angle2 = 10;
+            const int angle3 = 15;
+
+            // Act
+            var triangleAnalyzer = new Triangle();
+            var actual = triangleAnalyzer.AnalyzeTriangle(angle1, angle2, angle3);
+
+            // Assert
+            //Assert.AreEqual(INVALID_TRIANGLE, actual);
+            Assert.That(actual, Is.EqualTo(INVALID_TRIANGLE));
+        }
     }
 }
